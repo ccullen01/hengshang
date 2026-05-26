@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户协议 - Terms of Service | 衡熵</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a2e;
+            --accent-color: #4a90a4;
+            --text-primary: #2d2d2d;
+            --text-secondary: #666666;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border-color: #e0e0e0;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Language Switcher */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            padding: 16px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-color), #6c63ff);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .lang-switch {
+            display: flex;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 4px;
+            gap: 4px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all var(--transition-speed);
+            font-family: inherit;
+        }
+
+        .lang-btn:hover {
+            color: var(--accent-color);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: var(--accent-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .hero .date {
+            font-size: 14px;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 40px 0 80px;
+        }
+
+        .section {
+            margin-bottom: 48px;
+            opacity: 1;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+        .section:nth-child(7) { animation-delay: 0.7s; }
+        .section:nth-child(8) { animation-delay: 0.8s; }
+        .section:nth-child(9) { animation-delay: 0.9s; }
+        .section:nth-child(10) { animation-delay: 1s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            text-align: justify;
+            color: var(--text-primary);
+        }
+
+        .section ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            position: relative;
+            color: var(--text-primary);
+        }
+
+        .section li::marker {
+            color: var(--accent-color);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(74, 144, 164, 0.08), rgba(108, 99, 255, 0.08));
+            border-left: 4px solid var(--accent-color);
+            padding: 20px 24px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        .footer-content a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Language Display */
+        [data-lang="zh"] { display: block; }
+        [data-lang="en"] { display: none; }
+
+        body.lang-en [data-lang="zh"] { display: none; }
+        body.lang-en [data-lang="en"] { display: block; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .section h2 {
+                font-size: 20px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        /* Scroll Progress */
+        .progress-bar {
+            position: fixed;
+            top: 73px;
+            left: 0;
+            height: 3px;
+            background: var(--accent-color);
+            width: 0%;
+            z-index: 99;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">☯</div>
+                <span class="logo-text">衡熵</span>
+            </a>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+                <button class="lang-btn" onclick="switchLang('en')">English</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-lang="zh">用户协议</h1>
+            <h1 data-lang="en">Terms of Service</h1>
+            <p class="subtitle" data-lang="zh">衡熵 App 使用条款</p>
+            <p class="subtitle" data-lang="en"> HengShang App Terms of Use</p>
+            <p class="date" data-lang="zh">最近更新：2026年5月19日</p>
+            <p class="date" data-lang="en">Last Updated: May 19, 2026</p>
+        </div>
+    </section>
+
+    <main class="content">
+        <div class="container">
+            <!-- Section 1 -->
+            <div class="section">
+                <h2 data-lang="zh">1. 接受条款</h2>
+                <h2 data-lang="en">1. Acceptance of Terms</h2>
+                
+                <p data-lang="zh">欢迎使用衡熵 App（以下简称"本应用"）。通过访问或使用本应用，您同意受本用户协议的约束。如果您不同意本协议的任何部分，请勿使用本应用。</p>
+                <p data-lang="en">Welcome to HengShang App (hereinafter referred to as "the App"). By accessing or using this App, you agree to be bound by these Terms of Service. If you do not agree to any part of these terms, please do not use the App.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <h2 data-lang="zh">2. 服务描述</h2>
+                <h2 data-lang="en">2. Description of Service</h2>
+                
+                <p data-lang="zh">衡熵是一款专注于个人成长与自律管理的应用，主要功能包括：</p>
+                <p data-lang="en">HengShang is an app focused on personal growth and self-management, with main features including:</p>
+                
+                <ul data-lang="zh">
+                    <li>每日熵减行为追踪与记录</li>
+                    <li>芝麻信用分数评估与分析</li>
+                    <li>自律锁功能（限制分散注意力的应用）</li>
+                    <li>习惯养成与目标达成追踪</li>
+                    <li>个人笔记与反思记录</li>
+                    <li>连胜记录与成就系统</li>
+                </ul>
+                <ul data-lang="en">
+                    <li>Daily entropy reduction behavior tracking and recording</li>
+                    <li>Sesame Credit Score evaluation and analysis</li>
+                    <li>Self-control lock feature (restricting distracting apps)</li>
+                    <li>Habit building and goal achievement tracking</li>
+                    <li>Personal notes and reflection recording</li>
+                    <li>Streak records and achievement system</li>
+                </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <h2 data-lang="zh">3. 用户账户</h2>
+                <h2 data-lang="en">3. User Accounts</h2>
+                
+                <p data-lang="zh">使用本应用的部分功能可能需要创建账户。您同意：</p>
+                <p data-lang="en">Using some features of this App may require creating an account. You agree to:</p>
+                
+                <ul data-lang="zh">
+                    <li>提供真实、准确、完整的注册信息</li>
+                    <li>妥善保管您的账户凭证，如账户和密码</li>
+                    <li>对账户下发生的所有活动负责</li>
+                    <li>立即通知我们任何未经授权的账户使用情况</li>
+                </ul>
+                <ul data-lang="en">
+                    <li>Provide true, accurate, complete registration information</li>
+                    <li>Properly keep your account credentials, such as account and password</li>
+                    <li>Be responsible for all activities occurring under your account</li>
+                    <li>Immediately notify us of any unauthorized account use</li>
+                </ul>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <h2 data-lang="zh">4. 订阅与付费</h2>
+                <h2 data-lang="en">4. Subscriptions and Payments</h2>
+                
+                <p data-lang="zh">本应用提供以下订阅选项：</p>
+                <p data-lang="en">This App offers the following subscription options:</p>
+                
+                <ul data-lang="zh">
+                    <li><strong>月度订阅</strong>：每月自动续费，可随时取消</li>
+                    <li><strong>年度订阅</strong>：每年自动续费，享受优惠价格</li>
+                    <li><strong>终身买断</strong>：一次性付款，永久使用</li>
+                </ul>
+                <ul data-lang="en">
+                    <li><strong>Monthly Subscription</strong>: Auto-renews monthly, cancel anytime</li>
+                    <li><strong>Annual Subscription</strong>: Auto-renews yearly, discounted price</li>
+                    <li><strong>Lifetime Purchase</strong>: One-time payment, permanent use</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p data-lang="zh">取消订阅后，您仍可在当前订阅周期结束前使用已订阅的功能。订阅费用将在当前周期结束前24小时内扣除。</p>
+                    <p data-lang="en">After canceling your subscription, you can still use the subscribed features until the end of the current subscription period. Subscription fees will be charged within 24 hours before the end of the current period.</p>
+                </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section">
+                <h2 data-lang="zh">5. 隐私与数据</h2>
+                <h2 data-lang="en">5. Privacy and Data</h2>
+                
+                <p data-lang="zh">我们重视您的隐私。本应用会收集和使用您的个人数据，包括但不限于：</p>
+                <p data-lang="en">We value your privacy. This App collects and uses your personal data, including but not limited to:</p>
+                
+                <ul data-lang="zh">
+                    <li>行为记录与习惯数据</li>
+                    <li>使用时间与频率统计</li>
+                    <li>设备信息与性能数据</li>
+                    <li>订阅与购买记录</li>
+                </ul>
+                <ul data-lang="en">
+                    <li>Behavioral records and habit data</li>
+                    <li>Usage time and frequency statistics</li>
+                    <li>Device information and performance data</li>
+                    <li>Subscription and purchase records</li>
+                </ul>
+                
+                <p data-lang="zh">您的数据将用于改善应用体验、提供个性化服务，以及进行匿名化的统计分析。我们承诺不会出售您的个人信息给第三方广告商。详细隐私政策请参阅：<a href="privacy.html">隐私政策</a></p>
+                <p data-lang="en">Your data will be used to improve the app experience, provide personalized services, and conduct anonymous statistical analysis. We promise not to sell your personal information to third-party advertisers. For detailed privacy policy, please refer to: <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section">
+                <h2 data-lang="zh">6. 自律锁功能</h2>
+                <h2 data-lang="en">6. Self-Control Lock Feature</h2>
+                
+                <p data-lang="zh">自律锁功能旨在帮助用户减少分心应用的使用。请注意：</p>
+                <p data-lang="en">The self-control lock feature is designed to help users reduce the use of distracting apps. Please note:</p>
+                
+                <ul data-lang="zh">
+                    <li>自律锁功能基于 Screen Time API 实现，有效性取决于系统设置</li>
+                    <li>用户设定的锁定规则仅在选定时间段生效</li>
+                    <li>解锁需要通过完成每日熵减目标或订阅续费</li>
+                    <li>我们不对因功能限制失败而导致的任何损失负责</li>
+                </ul>
+                <ul data-lang="en">
+                    <li>The self-control lock feature is implemented based on Screen Time API, and its effectiveness depends on system settings</li>
+                    <li>Lock rules set by users only take effect during selected time periods</li>
+                    <li>Unlocking requires completing daily entropy reduction goals or subscription renewal</li>
+                    <li>We are not responsible for any losses caused by feature limitation failures</li>
+                </ul>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section">
+                <h2 data-lang="zh">7. 知识产权</h2>
+                <h2 data-lang="en">7. Intellectual Property</h2>
+                
+                <p data-lang="zh">本应用及其内容的所有知识产权，包括但不限于设计、代码、图标、文本，均归我们所有或已获得合法授权。未经明确许可，您不得复制、修改、分发或使用任何内容。</p>
+                <p data-lang="en">All intellectual property rights of this App and its content, including but not limited to designs, code, icons, and text, are owned by us or have been legally authorized. Without explicit permission, you may not copy, modify, distribute, or use any content.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <h2 data-lang="zh">8. 免责声明</h2>
+                <h2 data-lang="en">8. Disclaimer</h2>
+                
+                <p data-lang="zh">本应用按"原样"提供，不提供任何明示或暗示的保证。我们不对以下情况负责：</p>
+                <p data-lang="en">This App is provided "as is" without any express or implied warranties. We are not responsible for:</p>
+                
+                <ul data-lang="zh">
+                    <li>应用功能的中断、延迟或错误</li>
+                    <li>用户因使用应用而做出的任何决定</li>
+                    <li>任何间接、附带、特殊或后果性损害</li>
+                    <li>第三方应用的限制效果</li>
+                </ul>
+                <ul data-lang="en">
+                    <li>Interruption, delay, or errors in App functionality</li>
+                    <li>Any decisions made by users due to using the App</li>
+                    <li>Any indirect, incidental, special, or consequential damages</li>
+                    <li>Restriction effects of third-party apps</li>
+                </ul>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <h2 data-lang="zh">9. 协议修改</h2>
+                <h2 data-lang="en">9. Modifications to Terms</h2>
+                
+                <p data-lang="zh">我们保留随时修改本协议的权利。修改后，我们将在应用内或通过电子邮件通知您。继续使用本应用即表示您接受修改后的协议。</p>
+                <p data-lang="en">We reserve the right to modify these terms at any time. After modification, we will notify you within the App or via email. Continuing to use this App constitutes your acceptance of the modified agreement.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section">
+                <h2 data-lang="zh">10. 联系我们</h2>
+                <h2 data-lang="en">10. Contact Us</h2>
+                
+                <p data-lang="zh">如果您对本协议有任何疑问，请通过以下方式联系我们：</p>
+                <p data-lang="en">If you have any questions about these terms, please contact us:</p>
+                
+                <div class="highlight-box">
+                    <p data-lang="zh">电子邮件：support@hengshang.com</p>
+                    <p data-lang="en">Email: support@hengshang.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p data-lang="zh">© 2026 衡熵. 保留所有权利。</p>
+            <p data-lang="en">© 2026 HengShang. All rights reserved.</p>
+            <p style="margin-top: 12px;">
+                <a href="privacy.html" data-lang="zh">隐私政策</a>
+                <span data-lang="zh"> | </span>
+                <a href="terms.html" data-lang="en">Terms of Service</a>
+                <span data-lang="en"> | </span>
+                <a href="privacy.html" data-lang="en">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            // Update body class
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if ((lang === 'zh' && btn.textContent === '中文') ||
+                    (lang === 'en' && btn.textContent === 'English')) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Save preference
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLang');
+            if (savedLang) {
+                switchLang(savedLang);
+            }
+            
+            // Scroll progress bar
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('progressBar').style.width = scrolled + '%';
+            });
+        });
+    </script>
+</body>
+</html>
